@@ -38,7 +38,7 @@ Each real-time data entry is examined to extract the vehicle's ID, current posit
 8) Initializing Vehicle’s Stop Sequence:
 When a vehicle is encountered for the first time, its current position is compared with all scheduled stops in its trip. The stop closest to its current location is identified, and only the remaining stops from that point onward are kept for tracking. This ensures that the logging begins from the correct point in the route.
 
-9)Detecting Stop Arrival and Logging:
+9) Detecting Stop Arrival and Logging:
 For subsequent updates from the same vehicle, the script checks if the vehicle has remained within a small radius of its previous position (indicating a halt). If so, it then verifies whether the bus is near its next expected stop. If both conditions are met, it logs this stop’s details—along with the timestamp—into the output CSV.
 
 10) Updating Vehicle State and Looping:
