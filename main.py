@@ -105,7 +105,7 @@ while datetime.now(ist) < end_time:
                 continue  # skip this iteration since we just initialized
 
             state = vehicle_state[vehicle_id]
-            if haversine(lat, lon, state['prev_lat'], state['prev_lon']) < 50:
+            if haversine(lat, lon, state['prev_lat'], state['prev_lon']) < 5:
 
                 
                 next_seq = state['last_stop_seq'] + 1
@@ -117,7 +117,7 @@ while datetime.now(ist) < end_time:
                 next_stop = next_stop.iloc[0]
 
                 stop_lat, stop_lon = next_stop['stop_lat'], next_stop['stop_lon']
-                if haversine(lat, lon, stop_lat, stop_lon) < 50:
+                if haversine(lat, lon, stop_lat, stop_lon) < 5:
                     writer.writerow({
                         'vehicle_id': vehicle_id,
                         'route_id': route_id,
