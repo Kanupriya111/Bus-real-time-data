@@ -9,7 +9,7 @@ import csv # For reading and writing CSV
 import math  #to perform the caculations of Haversine function
 
 # # GTFS real-time vehicle positions URL
-pb_url = 'http://otd.delhi.gov.in/api/realtime/VehiclePositions.pb?key=JGv1kn1n0xZu5M5RUVoAgOTI4HUEvdcp'
+pb_url = 'xxx'
 
 # Setup paths
 loc = os.path.dirname(os.path.realpath(__file__))
